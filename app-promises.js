@@ -1,4 +1,14 @@
+/*
+*
+* Our Goal is to Output Shravan has 65% average in the class
+*
+* */
+
+
+
 //=========Let consider Dummy-Hardcoded Database==========================
+
+
 const users = [{
     id: 1,
     name: 'Shravan',
@@ -59,6 +69,27 @@ const getGrades = function (schoolId) {
   })  
 };
 
+
+const getStatus = function (userId) {
+    var user;
+
+    return getUser(userId).then(function (userObject) {
+         user = userObject;
+        return getGrades(user.schoolId);
+    }).then(function (grades) {
+        var avg = 0;
+        if(grades.length > 0){
+            avg = grades.map(function (grade) {
+                grade.grade
+            }).reduce(function (a,b) {
+                return a + b;
+                console.log(avg);
+            })
+        }
+        console.log(avg);
+    })
+};
+
 //======calling That getUser Function=============================================
 getUser(1).then(function (user) {
     console.log(user)
@@ -71,6 +102,12 @@ getGrades(999).then(function (grade) {
   }).catch(function (e) {
       console.log(e);
   });
+
+// getStatus(1).then(function (status) {
+//     console.log(status);
+// }).catch(function (e) {
+//     console.log(e);
+// });
 /*======OUTPUT=====================
 * { id: 1, name: 'Shravan', schoolId: 101 }
 [ { id: 2, schoolId: 999, grade: 90 } ]
