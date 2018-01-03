@@ -1,0 +1,23 @@
+{
+  "name": "NodeJs-Asyn-Await",
+  "version": "1.0.0",
+  "description": "Simple Example For Understanding NodeJs Async/Await functionality..",
+  "main": "Node-encryptions.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shravanz/NodeJs-Asyn-Await.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shravanz/NodeJs-Asyn-Await/issues"
+  },
+  "homepage": "https://github.com/shravanz/NodeJs-Asyn-Await#readme",
+  "dependencies": {
+    "axios": "^0.16.1"
+  }
+}
